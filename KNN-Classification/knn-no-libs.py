@@ -28,7 +28,7 @@ def euclideanDistance(instance1, instance2, length):
 def getNeighbors(trainingSet, testInstance, k):
 	distances = []
 	length = len(testInstance)-1
-	print(testInstance)
+	#print(testInstance)
 	for x in range(len(trainingSet)):
 		dist = euclideanDistance(testInstance, trainingSet[x], length)
 		distances.append((trainingSet[x], dist))
@@ -63,12 +63,12 @@ def getAccuracy(testSet, predictions):
 trainingSet=[]
 testSet=[]
 split = 0.9
-loadDataset('College.txt', split, trainingSet, testSet)
+loadDataset('College1.txt', split, trainingSet, testSet)
 print ('Train set: ' + repr(len(trainingSet)))
 print ('Test set: ' + repr(len(testSet)))
 # generate predictions
 predictions=[]
-k = 4
+k = 8
 
 
 for x in range(len(testSet)):
